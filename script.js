@@ -1,4 +1,7 @@
+import keyboard from './keyboard.js';
+console.log(keyboard);
 // add main wrapper
+
 const addAppWrap = () => {
     const wrap = document.createElement('div');
     document.body.appendChild(wrap);
@@ -50,4 +53,41 @@ const addInfoContent = () => {
     </p>`
 };
 addInfoContent();
+// add rows in keyboard
+const addRows = () => {
+    const rowFirst = document.createElement('div');
+    const keyboardWrap = document.querySelector('.keyboard');
+    keyboardWrap.appendChild(rowFirst);
+    rowFirst.classList.add('keybord__item','row','row-first');
+
+    const rowSecond = document.createElement('div');
+    keyboardWrap.appendChild(rowSecond);
+    rowSecond.classList.add('keybord__item','row','row-second');
+
+    const rowThird = document.createElement('div');
+    keyboardWrap.appendChild(rowThird);
+    rowThird.classList.add('keybord__item','row','row-third');
+
+    const rowFourth = document.createElement('div');
+    keyboardWrap.appendChild(rowFourth);
+    rowFourth.classList.add('keybord__item','row','row-fourth');
+
+    const rowFifth = document.createElement('div');
+    keyboardWrap.appendChild(rowFifth);
+    rowFifth.classList.add('keybord__item','row','row-fifth');
+};
+addRows();
+
+// add keys
+
+const addFirstRow = () => {
+    for(let i = 0; i < keyboard.length; i++) {
+      let key = document.createElement('div');
+      key.classList.add('key',`${keyboard[i].code}`);
+      key.textContent =  keyboard[i].content;
+      document.querySelector('.row-first').appendChild(key);
+    }
+    }
+    addFirstRow();
+
 
