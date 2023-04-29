@@ -1,8 +1,16 @@
+// add main wrapper
+const addAppWrap = () => {
+    const wrap = document.createElement('div');
+    document.body.appendChild(wrap);
+    wrap.classList.add('wrap');
+}
+addAppWrap();
 // add title to HTML
 const addTitle = () => {
     const title = document.createElement('h1');
     title.textContent = 'Virtual Keyboard';
-    document.body.appendChild(title);
+    const wrap = document.querySelector('.wrap')
+    wrap.appendChild(title);
     title.classList.add('title');
 }
 addTitle();
@@ -11,23 +19,27 @@ addTitle();
 
 const addTextArea = () => {
     const textArea = document.createElement('textarea');
-    document.body.appendChild(textArea);
-    textArea.classList.add('input-wrap');
+    const wrap = document.querySelector('.wrap')
+    wrap.appendChild(textArea);
+    textArea.classList.add('textarea');
 };
 addTextArea();
 
 // add keyboard wrap
 const addKeyboardWrap = () => {
      const keyboardWrap = document.createElement('div');
-     document.body.appendChild(keyboardWrap);
-     keyboardWrap.classList.add('keyboard-wrap');
+     const wrap = document.querySelector('.wrap')
+     wrap.appendChild(keyboardWrap);
+     keyboardWrap.classList.add('keyboard');
+     keyboardWrap.setAttribute('id','keyboard');
      
 };
 addKeyboardWrap();
 // add additional info
 const addInfoContent = () => {
     const infoWrap = document.createElement('div');
-    document.body.appendChild(infoWrap);
+    const wrap = document.querySelector('.wrap')
+    wrap.appendChild(infoWrap);
     infoWrap.classList.add('info-wrap');
     infoWrap.innerHTML = `
     <p class="info-wrap__content">
