@@ -81,7 +81,7 @@ addRows();
 // add keys
 
 const addFirstRow = () => {
-    for(let i = 0; i < keyboard.length; i++) {
+    for(let i = 0; i < 14; i++) {
       let key = document.createElement('div');
       key.classList.add('key',`${keyboard[i].code}`);
       key.textContent =  keyboard[i].content;
@@ -90,4 +90,41 @@ const addFirstRow = () => {
     }
     addFirstRow();
 
+const addSecondRow = () => {
+    for(let i = 14; i < 29; i++) {
+        let key = document.createElement('div');
+        key.classList.add('key',`${keyboard[i].code}`);
+        key.textContent =  keyboard[i].content;
+        document.querySelector('.row-second').appendChild(key);
+        }
+    }
+    addSecondRow();
 
+
+const addThirdRow = () => {
+    for(let i = 29; i < 42; i++) {
+        let key = document.createElement('div');
+        key.classList.add('key',`${keyboard[i].code}`);
+        key.textContent =  keyboard[i].content;
+        document.querySelector('.row-third').appendChild(key);
+        }
+    }
+    addThirdRow();
+const addFourthRow = () => {
+    for(let i = 42; i < 55; i++) {
+        let key = document.createElement('div');
+        key.classList.add('key',`${keyboard[i].code}`);
+        key.textContent =  keyboard[i].content;
+        document.querySelector('.row-fourth').appendChild(key);
+        }
+    }
+    addFourthRow();
+const addFifthRow = () => {
+    for(let i = 55; i < keyboard.length; i++) {
+        let key = document.createElement('div');
+        key.classList.add('key',`${keyboard[i].code}`);
+        key.textContent =  keyboard[i].content;
+        document.querySelector('.row-fifth').appendChild(key);
+        }
+    }
+    addFifthRow();

@@ -2,66 +2,79 @@ const keyboard = [
     // first row
 {
  content: "`",
+ aditionalContent: "~",
  keyCode: 192,
  code: "Backquote",
 },
 {
-content: "1",
+ content: "1",
+ aditionalContent: "!",
  keyCode: 49,
  code: "Digit1",
 },
 {
  content: "2",
+ aditionalContent: "@",
  keyCode: 50,
  code: "Digit2",
 },
 {
  content: "3",
+ aditionalContent: "#",
  keyCode: 51,
  code: "Digit3",
 },
 {
  content: "4",
+ aditionalContent: "$",
  keyCode: 52,
  code: "Digit4",
 },
 {
  content: "5",
+ aditionalContent: "%",
  keyCode: 53,
  code: "Digit5",
 },
 {
  content: "6",
+ aditionalContent: "^",
  keyCode: 54,
  code: "Digit6",
 },
 {
  content: "7",
+ aditionalContent: "&",
  keyCode: 55,
  code: "Digit7",
 },
 {
  content: "8",
+ aditionalContent: "*",
  keyCode: 56,
  code: "Digit8",
 },
 {
  content: "9",
+ aditionalContent: "(",
  keyCode: 57,
  code: "Digit9",
 },
 {
  content: "0",
+ aditionalContent: ")",
  keyCode: 48,
  code: "Digit0",
 },
 {
  content: "-",
+ aditionalContent: "_",
  keyCode: 189,
  code: "Minus",
 },
 {
  content: "=",
+ aditionalContent: "+",
  keyCode: 187,
  code: "Equal",
 },
@@ -69,657 +82,341 @@ content: "1",
  content: "Backspace",
  keyCode: 8,
  code: "Backspace",
-}
+},
 // second row
-// {
-//  "key": "Tab",
-//  "keyCode": 9,
-//  "which": 9,
-//  "code": "Tab",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Tab",
+ keyCode: 9,
+ code: "Tab",
+},
 
-// {
-//  "key": "q",
-//  "keyCode": 81,
-//  "which": 81,
-//  "code": "KeyQ",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Q",
+ contentRU: "Й",
+ keyCode: 81,
+ code: "KeyQ",
+},
 
-// {
-//  "key": "w",
-//  "keyCode": 87,
-//  "which": 87,
-//  "code": "KeyW",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "W",
+ contentRU: "Ц",
+ keyCode: 87,
+ code: "KeyW",
+},
 
-// {
-//  "key": "e",
-//  "keyCode": 69,
-//  "which": 69,
-//  "code": "KeyE",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "E",
+ contentRU: "У",
+ keyCode: 69,
+ code: "KeyE",
+},
 
-// {
-//  "key": "r",
-//  "keyCode": 82,
-//  "which": 82,
-//  "code": "KeyR",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "R",
+ contentRU: "К",
+ keyCode: 82,
+ code: "KeyR",
+},
 
-// {
-//  "key": "t",
-//  "keyCode": 84,
-//  "which": 84,
-//  "code": "KeyT",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "T",
+ contentRU: "Е",
+ keyCode: 84,
+ code: "KeyT",
+},
 
-// {
-//  "key": "y",
-//  "keyCode": 89,
-//  "which": 89,
-//  "code": "KeyY",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Y",
+ contentRU: "Н",
+ keyCode: 89,
+ code: "KeyY",
+},
 
-// {
-//  "key": "u",
-//  "keyCode": 85,
-//  "which": 85,
-//  "code": "KeyU",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "U",
+ contentRU: "Г",
+ keyCode: 85,
+ code: "KeyU",
+},
 
-// {
-//  "key": "i",
-//  "keyCode": 73,
-//  "which": 73,
-//  "code": "KeyI",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "I",
+ contentRU: "Ш",
+ keyCode: 73,
+ code: "KeyI",
+},
 
-// {
-//  "key": "o",
-//  "keyCode": 79,
-//  "which": 79,
-//  "code": "KeyO",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "O",
+ contentRU: "Щ",
+ keyCode: 79,
+ code: "KeyO",
+},
 
-// {
-//  "key": "p",
-//  "keyCode": 80,
-//  "which": 80,
-//  "code": "KeyP",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "P",
+ contentRU: "З",
+ keyCode: 80,
+ code: "KeyP",
+},
 
-// {
-//  "key": "[",
-//  "keyCode": 219,
-//  "which": 219,
-//  "code": "BracketLeft",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "[",
+ contentRU: "Х",
+ keyCode: 219,
+ code: "BracketLeft",
+},
 
-// {
-//  "key": "]",
-//  "keyCode": 221,
-//  "which": 221,
-//  "code": "BracketRight",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "]",
+ contentRU: "Ъ",
+ keyCode: 221,
+ code: "BracketRight",
+},
 
-// {
-//  "key": "\\",
-//  "keyCode": 220,
-//  "which": 220,
-//  "code": "Backslash",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "\\",
+ contentRU: "/",
+ keyCode: 220,
+ code: "Backslash",
+},
 
-// {
-//  "key": "Delete",
-//  "keyCode": 46,
-//  "which": 46,
-//  "code": "Delete",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "DEL",
+ keyCode: 46,
+ code: "Delete",
+},
 // third row
-// {
-//  "key": "CapsLock",
-//  "keyCode": 20,
-//  "which": 20,
-//  "code": "CapsLock",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "CapsLock",
+ keyCode: 20,
+ code: "CapsLock",
+},
 
-// {
-//  "key": "a",
-//  "keyCode": 65,
-//  "which": 65,
-//  "code": "KeyA",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "A",
+ contentRU: "Ф",
+ keyCode: 65,
+ code: "KeyA",
+},
 
-// {
-//  "key": "s",
-//  "keyCode": 83,
-//  "which": 83,
-//  "code": "KeyS",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "S",
+ contentRU: "Ы",
+ keyCode: 83,
+ code: "KeyS",
+},
 
-// {
-//  "key": "d",
-//  "keyCode": 68,
-//  "which": 68,
-//  "code": "KeyD",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "D",
+ contentRU: "В",
+ keyCode: 68,
+ code: "KeyD",
+},
 
-// {
-//  "key": "f",
-//  "keyCode": 70,
-//  "which": 70,
-//  "code": "KeyF",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "F",
+ contentRU: "А",
+ keyCode: 70,
+ code: "KeyF",
+},
 
-// {
-//  "key": "g",
-//  "keyCode": 71,
-//  "which": 71,
-//  "code": "KeyG",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "G",
+ contentRU: "П",
+ keyCode: 71,
+ code: "KeyG",
+},
 
-// {
-//  "key": "h",
-//  "keyCode": 72,
-//  "which": 72,
-//  "code": "KeyH",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "H",
+ contentRU: "Р",
+ keyCode: 72,
+ code: "KeyH",
+},
 
-// {
-//  "key": "j",
-//  "keyCode": 74,
-//  "which": 74,
-//  "code": "KeyJ",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "J",
+ contentRU: "О",
+ keyCode: 74,
+ code: "KeyJ",
+},
 
-// {
-//  "key": "k",
-//  "keyCode": 75,
-//  "which": 75,
-//  "code": "KeyK",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "K",
+ contentRU: "Л",
+ keyCode: 75,
+ code: "KeyK",
+},
 
-// {
-//  "key": "l",
-//  "keyCode": 76,
-//  "which": 76,
-//  "code": "KeyL",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "L",
+ contentRU: "Д",
+ keyCode: 76,
+ code: "KeyL",
+},
 
-// {
-//  "key": ";",
-//  "keyCode": 186,
-//  "which": 186,
-//  "code": "Semicolon",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: ";",
+ contentRU: "Ж",
+ keyCode: 186,
+ code: "Semicolon",
+},
 
-// {
-//  "key": "'",
-//  "keyCode": 222,
-//  "which": 222,
-//  "code": "Quote",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "'",
+ contentRU: "Э",
+ keyCode: 222,
+ code: "Quote",
+},
 
-// {
-//  "key": "Enter",
-//  "keyCode": 13,
-//  "which": 13,
-//  "code": "Enter",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Enter",
+ keyCode: 13,
+ code: "Enter",
+},
 // row fourth
-// {
-//  "key": "Shift",
-//  "keyCode": 16,
-//  "which": 16,
-//  "code": "ShiftLeft",
-//  "location": 1,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": true,
-//  "repeat": false
-// }
+{
+ content: "Shift",
+ keyCode: 16,
+ code: "ShiftLeft",
+},
 
-// {
-//  "key": "z",
-//  "keyCode": 90,
-//  "which": 90,
-//  "code": "KeyZ",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Z",
+ contentRU: "Я",
+ keyCode: 90,
+ code: "KeyZ",
+},
 
-// {
-//  "key": "x",
-//  "keyCode": 88,
-//  "which": 88,
-//  "code": "KeyX",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "X",
+ contentRU: "Ч",
+ keyCode: 88,
+ code: "KeyX",
+},
 
-// {
-//  "key": "c",
-//  "keyCode": 67,
-//  "which": 67,
-//  "code": "KeyC",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "C",
+ contentRU: "С",
+ keyCode: 67,
+ code: "KeyC",
+},
 
-// {
-//  "key": "v",
-//  "keyCode": 86,
-//  "which": 86,
-//  "code": "KeyV",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "V",
+ contentRU: "М",
+ keyCode: 86,
+ code: "KeyV",
+},
 
-// {
-//  "key": "b",
-//  "keyCode": 66,
-//  "which": 66,
-//  "code": "KeyB",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "B",
+ contentRU: "И",
+ keyCode: 66,
+ code: "KeyB",
+},
 
-// {
-//  "key": "n",
-//  "keyCode": 78,
-//  "which": 78,
-//  "code": "KeyN",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "N",
+ contentRU: "Т",
+ keyCode: 78,
+ code: "KeyN",
+},
 
-// {
-//  "key": "m",
-//  "keyCode": 77,
-//  "which": 77,
-//  "code": "KeyM",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "M",
+ contentRU: "Ь",
+ keyCode: 77,
+ code: "KeyM",
+},
 
-// {
-//  "key": ",",
-//  "keyCode": 188,
-//  "which": 188,
-//  "code": "Comma",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: ",",
+ contentRU: "Б",
+ keyCode: 188,
+ code: "Comma",
+},
 
-// {
-//  "key": ".",
-//  "keyCode": 190,
-//  "which": 190,
-//  "code": "Period",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: ".",
+ contentRU: "Ю",
+ keyCode: 190,
+ code: "Period",
+},
 
-// {
-//  "key": "/",
-//  "keyCode": 191,
-//  "which": 191,
-//  "code": "Slash",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "/",
+ contentRU: ".",
+ keyCode: 191,
+ code: "Slash",
+},
 
-// {
-//  "key": "ArrowUp",
-//  "keyCode": 38,
-//  "which": 38,
-//  "code": "ArrowUp",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "▲",
+ keyCode: 38,
+ code: "ArrowUp",
+},
 
-// {
-//  "key": "Shift",
-//  "keyCode": 16,
-//  "which": 16,
-//  "code": "ShiftRight",
-//  "location": 2,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": true,
-//  "repeat": false
-// }
+{
+ content: "Shift",
+ keyCode: 16,
+ code: "ShiftRight",
+},
 // fifth row
-// {
-//  "key": "Control",
-//  "keyCode": 17,
-//  "which": 17,
-//  "code": "ControlLeft",
-//  "location": 1,
-//  "altKey": false,
-//  "ctrlKey": true,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Ctrl",
+ keyCode: 17,
+ code: "ControlLeft",
+},
 
-// {
-//  "key": "Meta",
-//  "keyCode": 91,
-//  "which": 91,
-//  "code": "MetaLeft",
-//  "location": 1,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": true,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Win",
+ keyCode: 91,
+ code: "MetaLeft",
+},
 
-// {
-//  "key": "Alt",
-//  "keyCode": 18,
-//  "which": 18,
-//  "code": "AltLeft",
-//  "location": 1,
-//  "altKey": true,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Alt",
+ keyCode: 18,
+ code: "AltLeft",
+},
 
-// {
-//  "key": " ",
-//  "keyCode": 32,
-//  "which": 32,
-//  "code": "Space",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: " ",
+ keyCode: 32,
+ code: "Space",
+},
 
-// {
-//  "key": "Alt",
-//  "keyCode": 18,
-//  "which": 18,
-//  "code": "AltRight",
-//  "location": 2,
-//  "altKey": true,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Alt",
+ keyCode: 18,
+ code: "AltRight",
+},
 
-// {
-//  "key": "ArrowLeft",
-//  "keyCode": 37,
-//  "which": 37,
-//  "code": "ArrowLeft",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "◄",
+ keyCode: 37,
+ code: "ArrowLeft",
+},
 
-// {
-//  "key": "ArrowDown",
-//  "keyCode": 40,
-//  "which": 40,
-//  "code": "ArrowDown",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "▼",
+ keyCode: 40,
+ code: "ArrowDown",
+},
 
-// {
-//  "key": "ArrowRight",
-//  "keyCode": 39,
-//  "which": 39,
-//  "code": "ArrowRight",
-//  "location": 0,
-//  "altKey": false,
-//  "ctrlKey": false,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "►",
+ keyCode: 39,
+ code: "ArrowRight",
+},
 
-// {
-//  "key": "Control",
-//  "keyCode": 17,
-//  "which": 17,
-//  "code": "ControlRight",
-//  "location": 2,
-//  "altKey": false,
-//  "ctrlKey": true,
-//  "metaKey": false,
-//  "shiftKey": false,
-//  "repeat": false
-// }
+{
+ content: "Ctrl",
+ keyCode: 17,
+ code: "ControlRight",
+}
 ]
 export default keyboard;
 

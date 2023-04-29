@@ -69,3 +69,15 @@ body {
 .ShiftLeft {
     width: 100px;
 }
+
+.Tab {
+    width: 50px;
+}
+.Enter,
+.ShiftRight {
+    width: 86px;
+}
+
+.Space {
+    width: 330px;
+}
