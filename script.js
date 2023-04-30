@@ -1,5 +1,6 @@
 import keyboard from './keyboard.js';
 console.log(keyboard);
+
 // add main wrapper
 
 const addAppWrap = () => {
@@ -84,6 +85,7 @@ const addFirstRow = () => {
     for(let i = 0; i < 14; i++) {
       let key = document.createElement('div');
       key.classList.add('key',`${keyboard[i].code}`);
+      key.setAttribute('data', `${keyboard[i].code}`);
       key.textContent =  keyboard[i].content;
       document.querySelector('.row-first').appendChild(key);
     }
@@ -94,6 +96,7 @@ const addSecondRow = () => {
     for(let i = 14; i < 29; i++) {
         let key = document.createElement('div');
         key.classList.add('key',`${keyboard[i].code}`);
+        key.setAttribute('data', `${keyboard[i].code}`);
         key.textContent =  keyboard[i].content;
         document.querySelector('.row-second').appendChild(key);
         }
@@ -105,6 +108,7 @@ const addThirdRow = () => {
     for(let i = 29; i < 42; i++) {
         let key = document.createElement('div');
         key.classList.add('key',`${keyboard[i].code}`);
+        key.setAttribute('data', `${keyboard[i].code}`);
         key.textContent =  keyboard[i].content;
         document.querySelector('.row-third').appendChild(key);
         }
@@ -114,6 +118,7 @@ const addFourthRow = () => {
     for(let i = 42; i < 55; i++) {
         let key = document.createElement('div');
         key.classList.add('key',`${keyboard[i].code}`);
+        key.setAttribute('data', `${keyboard[i].code}`);
         key.textContent =  keyboard[i].content;
         document.querySelector('.row-fourth').appendChild(key);
         }
@@ -123,8 +128,14 @@ const addFifthRow = () => {
     for(let i = 55; i < keyboard.length; i++) {
         let key = document.createElement('div');
         key.classList.add('key',`${keyboard[i].code}`);
+        key.setAttribute('data', `${keyboard[i].code}`);
         key.textContent =  keyboard[i].content;
         document.querySelector('.row-fifth').appendChild(key);
         }
     }
     addFifthRow();
+// add styles for active/removed keys
+document.onkeydown= (event) => {
+document.querySelectorAll('.key').forEach((element)=> {element.classList.remove('active')});
+document.querySelector('.key[data="'+ event.code +'"]').classList.add('active');
+}
