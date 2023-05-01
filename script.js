@@ -1,5 +1,7 @@
 import keyboard from './keyboard.js';
 console.log(keyboard);
+let isCapsOn = false;
+
 
 // add main wrapper
 
@@ -24,6 +26,7 @@ addTitle();
 const addTextArea = () => {
     const textArea = document.createElement('textarea');
     const wrap = document.querySelector('.wrap')
+    textArea.setAttribute('autofocus', '');
     wrap.appendChild(textArea);
     textArea.classList.add('textarea');
 };
@@ -134,8 +137,100 @@ const addFifthRow = () => {
         }
     }
     addFifthRow();
+
 // add styles for active/removed keys
 document.onkeydown= (event) => {
 document.querySelectorAll('.key').forEach((element)=> {element.classList.remove('active')});
 document.querySelector('.key[data="'+ event.code +'"]').classList.add('active');
-}
+};
+
+// add events
+let keys = [];
+const addKeysArrow = () => {keyboard.forEach(element=>{
+    keys.push(element.content);
+})};
+addKeysArrow();
+console.log(keys);
+const keysArr = document.getElementsByClassName('key');
+console.log(keysArr);
+let input = document.querySelector('.textarea');
+
+const setLowerCaseKeys = () => {
+    for (const key of keysArr) {
+      if (key.innerHTML.length === 1) {
+        key.innerHTML = key.innerHTML.toLowerCase();
+      }
+    }
+  };
+  const setUpperCaseKeys = () => {
+    for (const key of keysArr) {
+      if (key.innerHTML.length === 1) {
+        key.innerHTML = key.innerHTML.toUpperCase();
+      }
+    }
+  };
+  
+  //CLICK events
+  //  Spacebar
+  keysArr[58].addEventListener('click', () => {
+    input.innerHTML += ' '
+  });
+  
+  // Tab
+  keysArr[14].addEventListener('click', () => {
+    input.innerHTML += '   '
+  });
+  
+  // Enter
+  keysArr[41].addEventListener('click', () => {
+    input.innerHTML += '\n'
+  });
+  
+  // L-Shift
+  keysArr[42].addEventListener('mousedown', () => {
+    setUpperCaseKeys()
+  });
+  keysArr[42].addEventListener('mouseup', () => {
+    setLowerCaseKeys()
+  })
+  
+  // R-Shift
+  keysArr[54].addEventListener('mousedown', () => {
+    setUpperCaseKeys()
+  });
+  keysArr[54].addEventListener('mouseup', () => {
+    setLowerCaseKeys()
+  });
+  
+  //  Capslock
+  keysArr[29].addEventListener('click', () => {
+    isCapsOn = !isCapsOn;
+    if (isCapsOn === true) {
+      keysArr[29].classList.add('active')
+      setUpperCaseKeys();
+    } else {
+      keysArr[29].classList.remove('active')
+      setLowerCaseKeys();
+    }
+  });
+  
+  // Backspace
+  keysArr[13].addEventListener('click', () => {
+    if (input.innerHTML !== undefined) {
+      input.innerHTML = input.innerHTML.slice(0, input.innerHTML.length - 1)
+    }
+  });
+  
+  //Del
+  keysArr[28].addEventListener('click', () => {
+    input.innerHTML = '';
+  });
+  
+  // Display Text
+  for (const key of keysArr) {
+    if (key.innerHTML.length === 1) {
+      if(key.innerHTML !== '▲' && key.innerHTML !== '►' && key.innerHTML !==  '▼' && key.innerHTML !== '◄'){
+        key.addEventListener('click', () => input.innerHTML += key.innerHTML)
+        }
+    }
+  }

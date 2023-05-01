@@ -91,70 +91,70 @@ const keyboard = [
 },
 
 {
- content: "Q",
+ content: "q",
  contentRU: "Й",
  keyCode: 81,
  code: "KeyQ",
 },
 
 {
- content: "W",
+ content: "w",
  contentRU: "Ц",
  keyCode: 87,
  code: "KeyW",
 },
 
 {
- content: "E",
+ content: "e",
  contentRU: "У",
  keyCode: 69,
  code: "KeyE",
 },
 
 {
- content: "R",
+ content: "r",
  contentRU: "К",
  keyCode: 82,
  code: "KeyR",
 },
 
 {
- content: "T",
+ content: "t",
  contentRU: "Е",
  keyCode: 84,
  code: "KeyT",
 },
 
 {
- content: "Y",
+ content: "y",
  contentRU: "Н",
  keyCode: 89,
  code: "KeyY",
 },
 
 {
- content: "U",
+ content: "u",
  contentRU: "Г",
  keyCode: 85,
  code: "KeyU",
 },
 
 {
- content: "I",
+ content: "i",
  contentRU: "Ш",
  keyCode: 73,
  code: "KeyI",
 },
 
 {
- content: "O",
+ content: "o",
  contentRU: "Щ",
  keyCode: 79,
  code: "KeyO",
 },
 
 {
- content: "P",
+ content: "p",
  contentRU: "З",
  keyCode: 80,
  code: "KeyP",
@@ -194,63 +194,63 @@ const keyboard = [
 },
 
 {
- content: "A",
+ content: "a",
  contentRU: "Ф",
  keyCode: 65,
  code: "KeyA",
 },
 
 {
- content: "S",
+ content: "s",
  contentRU: "Ы",
  keyCode: 83,
  code: "KeyS",
 },
 
 {
- content: "D",
+ content: "d",
  contentRU: "В",
  keyCode: 68,
  code: "KeyD",
 },
 
 {
- content: "F",
+ content: "f",
  contentRU: "А",
  keyCode: 70,
  code: "KeyF",
 },
 
 {
- content: "G",
+ content: "g",
  contentRU: "П",
  keyCode: 71,
  code: "KeyG",
 },
 
 {
- content: "H",
+ content: "h",
  contentRU: "Р",
  keyCode: 72,
  code: "KeyH",
 },
 
 {
- content: "J",
+ content: "j",
  contentRU: "О",
  keyCode: 74,
  code: "KeyJ",
 },
 
 {
- content: "K",
+ content: "k",
  contentRU: "Л",
  keyCode: 75,
  code: "KeyK",
 },
 
 {
- content: "L",
+ content: "l",
  contentRU: "Д",
  keyCode: 76,
  code: "KeyL",
@@ -283,49 +283,49 @@ const keyboard = [
 },
 
 {
- content: "Z",
+ content: "z",
  contentRU: "Я",
  keyCode: 90,
  code: "KeyZ",
 },
 
 {
- content: "X",
+ content: "x",
  contentRU: "Ч",
  keyCode: 88,
  code: "KeyX",
 },
 
 {
- content: "C",
+ content: "c",
  contentRU: "С",
  keyCode: 67,
  code: "KeyC",
 },
 
 {
- content: "V",
+ content: "v",
  contentRU: "М",
  keyCode: 86,
  code: "KeyV",
 },
 
 {
- content: "B",
+ content: "b",
  contentRU: "И",
  keyCode: 66,
  code: "KeyB",
 },
 
 {
- content: "N",
+ content: "n",
  contentRU: "Т",
  keyCode: 78,
  code: "KeyN",
 },
 
 {
- content: "M",
+ content: "m",
  contentRU: "Ь",
  keyCode: 77,
  code: "KeyM",
@@ -353,7 +353,7 @@ const keyboard = [
 },
 
 {
- content: "▲",
+ content:"▲",
  keyCode: 38,
  code: "ArrowUp",
 },
@@ -416,6 +416,7 @@ const keyboard = [
  content: "Ctrl",
  keyCode: 17,
  code: "ControlRight",
+
 }
 ]
 export default keyboard;
