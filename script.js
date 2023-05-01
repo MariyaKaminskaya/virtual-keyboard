@@ -91,6 +91,10 @@ const addFirstRow = () => {
       key.setAttribute('data', `${keyboard[i].code}`);
       key.textContent =  keyboard[i].content;
       document.querySelector('.row-first').appendChild(key);
+      let adChar =document.createElement('span');
+      adChar.classList.add('aditional-content');
+      adChar.textContent =  keyboard[i].aditionalContent;
+      key.appendChild(adChar);
     }
     }
     addFirstRow();
@@ -138,9 +142,10 @@ const addFifthRow = () => {
     }
     addFifthRow();
 
-// add styles for active/removed keys
-document.onkeydown= (event) => {
-document.querySelectorAll('.key').forEach((element)=> {element.classList.remove('active')});
+// add styles for active keys
+document.onkeyup= (event) => {
+document.querySelectorAll('.key').forEach((element)=> {
+   element.classList.remove('active')});
 document.querySelector('.key[data="'+ event.code +'"]').classList.add('active');
 };
 
@@ -169,8 +174,9 @@ const setLowerCaseKeys = () => {
       }
     }
   };
+// KEY events
   
-  //CLICK events
+//CLICK events
   //  Spacebar
   keysArr[58].addEventListener('click', () => {
     input.innerHTML += ' '
